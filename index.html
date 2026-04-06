@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/icn.jpg">
+    <title>Obsesiones Literarias</title>
 </head>
 <body>
-    
+    <header>
+        <div >
+            <p id="logo">Obsesiones Literarias</p>
+        </div>
+        <nav>
+            <a href="">Quienes Somos</a>
+            <a href="">Categorias</a>
+            <a href="">Contactanos</a>
+            <button class="theme">
+                <i class="fa-solid fa-sun changeTheme"></i>
+            </button>
+            <button class="carrito-principal">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+        </nav>
+    </header>
+    <section id="hero">
+        <h1>Dejate Llevar Por Nuestras Historias</h1>
+    </section>
+    <section id="libros-destacados">
+        <div class="titulo-contenedor">
+            <h2>Conoce Nuestros Libros Destacados</h2>
+        </div>
+        <div class="container">
+            <div class="item">
+                <img src="images/libro1.jpg" alt="">
+                <p><strong>Los Miserables</strong></p>
+                <ul>
+                    <li><em>Victor Hugo</em></li>
+                    <li>31 de marzo de 1862</li>
+                </ul>
+                <button class="btn-agregarCarrito btn-generico">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <img src="images/libro2.jpg" alt="">
+                <p><strong>Crimen y Castigo</strong></p>
+                <ul>
+                    <li><em>Fiodor Dostoyevski</em></li>
+                    <li>Diciembre 1866</li>
+                </ul>
+                <button class="btn-agregarCarrito btn-generico">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <img src="images/libro3.jpg" alt="">
+                <p><strong>Mujercitas</strong></p>
+                <ul>
+                    <li><em>Louisa May Alcott</em></li>
+                    <li>1868</li>
+                </ul>
+                <button class="btn-agregarCarrito btn-generico">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="caracteristicas">
+        <div class="container">
+            <ul>
+                <li>Envíos a Todos el País</li>
+                <li>Libros de Todas las Épocas y Géneros</li>
+                <li>Precio Accesibles Para Todos</li>
+                <button class="btn-generico">¡¡CONTACTANOS!!</button>
+            </ul>
+            <div class="direccion">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3896.049672203198!2d-86.87049322493237!3d12.446411387822842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDI2JzQ3LjEiTiA4NsKwNTInMDQuNSJX!5e0!3m2!1ses!2sni!4v1775497741175!5m2!1ses!2sni" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; Obsesiones Literarias 2026</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/obse.sionesliterarias/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.link/xs16t9" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
