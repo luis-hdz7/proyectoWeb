@@ -64,15 +64,20 @@ a{
     cursor: pointer;
     transition: color 0.2s ease;
 }
-a:hover{
+a:hover,
+a:focus{
     color: var(--color-chocolate);
 }
 ul{
     list-style: none;
     padding: 0;
-    margin: 0 0 15px 0;
+    margin: 0;
+    text-align: center;
 }
-li{ font-size: var(--fs-base);}
+li{
+    font-size: var(--fs-base);
+    margin: 10px 0;
+}
 .btn-generico{
     font-size: var(--fs-base);
     font-weight: bold;
@@ -95,6 +100,8 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 #logo{
     font-family: var(--cursiva-fuentes);
@@ -104,6 +111,17 @@ header{
 nav{
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.nav-butones{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.nav-links{
+    display: flex;
+    gap: 20px;
 }
 .theme, .carrito-principal{
     background: none;
@@ -119,13 +137,12 @@ nav{
 
 /**HERO*/
 #hero{
-    margin: 15px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height: 90vh;
+    height: 65vh;
     background-image: linear-gradient(
         0deg,
         var(--overlay),
@@ -136,7 +153,7 @@ nav{
     background-size: cover;
     background-position: center center;
 }
-#hero h1{
+#hero h2{
     color: var(--color-claro);
 }
 
@@ -160,7 +177,7 @@ nav{
 }
 .item{
     background-color: var(--color-chocolate-claro);
-    padding: 30px 80px;
+    padding: 10px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,7 +200,6 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 20px;
 }
 
@@ -238,7 +254,8 @@ footer{
 .dark-mode .carrito-principal{
     color: var(--color-claro);
 }
-.dark-mode a:hover{
+.dark-mode a:hover,
+.dark-mode a:focus{
     color: var(--color-chocolate-claro);
 }
 
@@ -254,9 +271,20 @@ footer{
         width: 100%;
         z-index: 1000;
     }
+    nav{
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    }
+    #hero{
+        height: 90vh;
+    }
     #libros-destacados .container{
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    .item{
+        padding: 20px 70px;
     }
     #caracteristicas .container{
     display: flex;
