@@ -83,6 +83,7 @@ input,textarea {
     border-bottom: 2px solid var(--color-text);
     font-family: var(--parrafos-fuente);
     color: var(--color-chocolate);
+    width: 280px;
 }
 input::placeholder,
 textarea::placeholder {
