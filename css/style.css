@@ -24,9 +24,11 @@
     --color-bg: var(--color-claro);
     --color-text: var(--color-oscuro);
     --overlay: rgba(0,0,0,0.5);
+
 }
+
 /**estilos generales*/
-*, *::before, *::after {
+*{
     box-sizing: border-box;
 }
 
@@ -76,19 +78,7 @@ li{
     font-size: var(--fs-base);
     margin: 10px 0;
 }
-input,textarea {
-    border: none;
-    outline: none;
-    background: none;
-    border-bottom: 2px solid var(--color-text);
-    font-family: var(--parrafos-fuente);
-    color: var(--color-chocolate);
-}
-input::placeholder,
-textarea::placeholder {
-    color: var(--color-chocolate);
-}
-/*.btn-generico{
+.btn-generico{
     font-size: var(--fs-base);
     font-weight: bold;
     padding: 10px 30px;
@@ -100,27 +90,168 @@ textarea::placeholder {
 }
 .btn-generico:hover{
     background-color: var(--color-oscuro-hover);
-}*/
+}
+
+
+/**HEADER*/
+header{
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+#logo{
+    font-family: var(--cursiva-fuentes);
+    font-weight: bold;
+    font-size: var(--fs-xl);
+}
+nav{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.nav-butones{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+.theme, .carrito-principal{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--fs-base);
+
+}
+.fa-moon{
+    font-size: var(--fs-base);
+    color: var(--color-claro);
+}
+
+/**HERO*/
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 65vh;
+    background-image: linear-gradient(
+        0deg,
+        var(--overlay),
+        var(--overlay)
+    )
+    ,url("../images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero h2{
+    color: var(--color-claro);
+}
+
+
+/**Seccion de Libros Destacados*/
+.titulo-contenedor{
+    text-align: center;
+}
+.item img{
+    width: 240px;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+#libros-destacados .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.item{
+    background-color: var(--color-chocolate-claro);
+    padding: 10px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.item:hover {
+    transform: translateY(-5px);
+}
+
+/**Caracteristicas*/
+#caracteristicas{
+    margin: 30px 0;
+    padding: 70px;
+}
+#caracteristicas li{
+    font-weight: bold;
+}
+#caracteristicas ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.direccion{
+    display: none;
+}
+
+
+/**FOOTER*/
+footer{
+    background-color: var(--color-chocolate);
+    margin: 0;
+    height: 100px;
+    color: var(--color-chocolate-claro);
+    display: flex;
+    justify-content: center;
+}
+.social-media{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.social-media a{
+    color: var(--color-chocolate-claro);
+}
+.social-media i{
+    font-size: var(--fs-lg);
+    cursor: pointer;
+}
+.social-media i:hover{
+    color: var(--color-claro);
+}
+
 /**DARK MODE*/
 .dark-mode {
     --color-bg: var(--color-oscuro);
     --color-text: var(--color-claro);
     --overlay: rgba(0,0,0,0.7);
 }
-.dark-mode .item {
+.dark-mode .item,
+.dark-mode .tarjeta {
     background-color: #242423;
     box-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
-.dark-mode .item:hover{
+.dark-mode .item:hover,
+.dark-mode .tarjeta:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.8);
 }
 .dark-mode .btn-generico {
     background-color: var(--color-chocolate-claro);
     color: var(--color-oscuro);
     border: none;
-}
-.dark-mode .btn-generico:hover{
-    background-color: var(--color-claro-hover);
 }
 .dark-mode .carrito-principal{
     color: var(--color-claro);
@@ -129,18 +260,9 @@ textarea::placeholder {
 .dark-mode a:focus{
     color: var(--color-chocolate-claro);
 }
-.dark-mode input::placeholder,
-.dark-mode textarea::placeholder {
-    color: var(--color-chocolate-claro);
-}
-.dark-mode input,
-.dark-mode textarea{
-    color: var(--color-chocolate-claro);;
-}
-
 
 /**DESKTOP*/
-/*@media (min-width: 850px){
+@media (min-width: 850px){
     header{
         flex-direction: row;
         justify-content: space-between;
@@ -152,11 +274,27 @@ textarea::placeholder {
         z-index: 1000;
     }
     nav{
-        display: flex;
-        gap: 15px;
-        flex-direction: row;
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
     }
     #hero{
         height: 90vh;
     }
-}*/
+    #libros-destacados .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .item{
+        padding: 20px 70px;
+    }
+    #caracteristicas .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    }
+    .direccion{
+    display: block;
+    }
+}

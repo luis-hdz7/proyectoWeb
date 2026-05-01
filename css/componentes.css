@@ -1,0 +1,20 @@
+.btn-generico{
+    font-size: var(--fs-base);
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: var(--color-claro);
+    background-color: var(--color-oscuro);
+}
+.btn-generico:hover{
+    background-color: var(--color-oscuro-hover);
+}
+.item{
+    background-color: var(--color-chocolate-claro);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.item:hover {
+    transform: translateY(-5px);
+}
