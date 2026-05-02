@@ -9,11 +9,10 @@
     border-radius: 20px;
 }
 .libros-destacados .container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(80px,350px));
+    gap: clamp(10px, 2vw, 20px);
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
 }
 .item{
     background-color: var(--color-chocolate-claro);

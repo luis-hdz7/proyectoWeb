@@ -88,7 +88,7 @@ footer{
 
 
 /**DESKTOP*/
-@media (min-width: 850px){
+@media (min-width: 700px){
     header{
         flex-direction: row;
         justify-content: space-between;
@@ -99,12 +99,15 @@ footer{
         width: 100%;
         z-index: 1000;
     }
+    .hero{
+        height: 90vh;
+    }
+}
+@media (min-width: 500px){
     nav{
         display: flex;
         gap: 15px;
         flex-direction: row;
-    }
-    .hero{
-        height: 90vh;
+        flex-wrap: wrap;
     }
 }
